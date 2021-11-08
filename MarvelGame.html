@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html{
+            background-image: url(https://th.bing.com/th/id/R.fee31a5f401dba41b4766e283aa64585?rik=bSXQHasuLh2W1Q&riu=http%3a%2f%2fpavbca.com%2fwalldb%2foriginal%2fd%2ff%2fc%2f706598.jpg&ehk=uHUqE3zHV9MKy1y3ILz8sjm4Xzo6YD9XnplbGwBS9XY%3d&risl=&pid=ImgRaw&r=0);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        #bkw{
+            height: 900px;
+            z-index:1000;
+        }
+        #hela{
+            position: absolute;
+            left: 1000px;       
+        }
+        #b1{
+            position: absolute;
+            top: 400px;
+            left: 700px;
+            height: 50px;
+            width: 200px;
+        }
+        #b2{
+            position: absolute;
+            top: 450px;
+            left: 700px;
+            height: 50px;
+            width: 200px;
+        }
+        #b3{
+            position: absolute;
+            top: 500px;
+            left: 700px;
+            height: 50px;
+            width: 200px;
+        
+        }
+        #weapon{
+            position: absolute;
+            top: -75px;
+            left: 120px;
+            transform:rotate(-25deg);
+            z-index:1;
+
+        }
+        @keyframes weaponAnimation{
+            from{
+                top:-100px ;
+                left:40px ;
+                transform: rotate(0deg);
+            }
+            to{
+                top:-100px ;
+                left:900px ;
+                transform: rotate(180deg);
+            }
+            
+        }
+        @keyframes rotateHela{
+            0%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(0deg);
+            }
+            52%{
+                transform: rotate(360deg);
+            }
+            75%{
+                transform: rotate(360deg);
+            }
+            100%{
+                transform: rotate(3600deg);
+            }
+        }
+        @keyframes vanishHela{
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 1;
+            }
+            52%{
+                opacity: 0.8;
+            }
+            75%{
+                opacity: 0.5;
+            }
+            85%{
+                opacity: 0.2;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        @keyframes bothHela{
+            0%{
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+            50%{
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+            52%{
+                transform: rotate(250deg);
+                opacity: 0.8;
+            }
+            75%{
+                transform: rotate(360deg);
+                opacity: 0.5;
+            }
+            85%{
+                transform: rotate(360deg);
+                opacity: 0.2;
+            }
+            100%{
+                transform: rotate(360deg);
+                opacity: 0;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <img id="bkw" src="https://www.freepngimg.com/thumb/scarlett_johansson/73265-johansson-alliance-iron-black-marvel:-the-man.png">
+    <img id="weapon" src="https://gbf.wiki/images/thumb/0/03/Weapon_b_1020000800.png/462px-Weapon_b_1020000800.png">
+    <button id="b1" onclick="shot1(this)">Shot-1= Do Both Below</button>
+    <button id="b2" onclick="shot2(this)">Shot-2= Rotate Hela Badly</button>
+    <button id="b3" onclick="shot3(this)">Shot-3= Vanish Hela</button>
+    <img id="hela" src="https://www.pinclipart.com/picdir/big/318-3189621_hela-marvel-comics-clipart.png">
+    <script>
+        function shot1(){
+         document.getElementById("weapon").style.animation="weaponAnimation 2s";
+         document.getElementById("hela").style.animation="bothHela 4s";
+     }
+     function shot2(){
+         document.getElementById("weapon").style.animation="weaponAnimation 2s";
+         document.getElementById("hela").style.animation="rotateHela 4s";
+     }
+     function shot3(){
+         document.getElementById("weapon").style.animation="weaponAnimation 2s";
+         document.getElementById("hela").style.animation="vanishHela 4s";
+     }
+    </script>
+
+</body>
+</html>
